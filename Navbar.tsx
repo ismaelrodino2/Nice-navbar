@@ -74,7 +74,7 @@ const NavBar = () => {
 
           <button
             onClick={() => setActive(!active)}
-            className="md:hidden absolute z-30 right-2"
+            className="md:hidden fixed z-30 right-2"
           >
             <div>
               <button className="relative group">
@@ -107,7 +107,7 @@ const NavBar = () => {
               active
                 ? " opacity-100 pointer-events-auto"
                 : "pointer-events-none opacity-0 "
-            } w-full md:hidden md:items-center md:w-auto transition-all ease-in-out duration-300  absolute  top-0 left-0 right-0 bottom-0  bg-gray-50 flex z-10 flex-col p-5`}
+            } w-full md:hidden md:items-center md:w-auto transition-all ease-in-out duration-300  fixed  top-0 left-0 right-0 bottom-0  bg-gray-50 flex z-10 flex-col p-5`}
           >
             <hr className="h-[1px] mt-12 w-full bg-black mb-4" />
             <div className="h-full  flex flex-col justify-center">

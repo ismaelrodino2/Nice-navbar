@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useState } from "react";
 
 const NavBar = () => {
@@ -6,25 +7,28 @@ const NavBar = () => {
   return (
     <div
       className="
-      antialiased
-      bg-gradient-to-r
-      from-pink-300
-      via-purple-300
-      to-indigo-400
-    "
+      
+     bg-white  md:backdrop-blur-lg	
+     md:bg-[transparent]  md:fixed w-full"
     >
       <header>
         <nav
           className="
           flex flex-wrap
+          max-w-[1140px]
           items-center
           justify-between
           w-full
-          py-4
           md:py-0
-          px-4
-          text-lg text-gray-700
+          px-5
+          mx-auto
           bg-white
+          
+          fixed
+          md:static
+          md:backdrop-blur-lg	
+          md:bg-[transparent]
+          py-3
         "
         >
           <div className="uppercase font-bold">Logo</div>
@@ -61,13 +65,12 @@ const NavBar = () => {
                   Blog
                 </a>
               </li>
-              <li>
-                <a
-                  className="md:p-4 py-2 block hover:text-purple-400 text-purple-500"
-                  href="#"
-                >
-                  Sign Up
-                </a>
+              <li className="flex items-center cursor-pointer">
+                <Link href="/signup">
+                  <div className="bg-black px-4 py-2 text-white rounded-lg">
+                    Get Started
+                  </div>
+                </Link>
               </li>
             </ul>
           </div>
@@ -107,8 +110,9 @@ const NavBar = () => {
               active
                 ? " opacity-100 pointer-events-auto"
                 : "pointer-events-none opacity-0 "
-            } w-full md:hidden md:items-center md:w-auto transition-all ease-in-out duration-300  fixed  top-0 left-0 right-0 bottom-0  bg-gray-50 flex z-10 flex-col p-5`}
+            } w-full md:hidden md:items-center md:w-auto transition-all ease-in-out duration-300  fixed  top-0 left-0 right-0 bottom-0  bg-white flex z-10 flex-col p-5`}
           >
+            <span>LOGO</span>
             <hr className="h-[1px] mt-12 w-full bg-black mb-4" />
             <div className="h-full  flex flex-col justify-center">
               <ul
@@ -152,12 +156,9 @@ const NavBar = () => {
                   </a>
                 </li>
                 <li>
-                  <a
-                    className="md:p-4 py-2 block hover:text-purple-400 text-purple-500"
-                    href="#"
-                  >
-                    Sign Up
-                  </a>
+                  <div className="bg-black p-4 text-white rounded-lg">
+                    <Link href="/signup">Get Started</Link>
+                  </div>
                 </li>
               </ul>
             </div>
